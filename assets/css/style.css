@@ -139,6 +139,7 @@ button img {
 .game-start{
     display: flex;
     align-items: center;
+    height: 100%;
     justify-content: space-between;
     display: none;
 }
@@ -157,6 +158,7 @@ button img {
 /* result start  */
 .result-game{
     display: flex;
+    height: 100%;
     align-items: center;
     justify-content: space-around;
     display: none;
@@ -278,6 +280,25 @@ button img {
     justify-content: space-between;
     align-items: center;
   }
+
+  .game-left{
+    height: 70%;
+    width: 37%;
+    animation: shake 0.9s ease infinite;
+
+}
+
+
+
+
+
+.game-right{
+    height: 70%;
+    width: 37%;
+    animation: shake 0.9s ease infinite;
+
+}
+
 }
 
 @media (max-width: 469px) {
@@ -306,6 +327,39 @@ button img {
     justify-content: space-between;
     align-items: center;
   }
+  .footer{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .game-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.game-header p{
+    font-size: 10px;
+}
+
+.left-hand{
+    width: 37%;
+    height: 70%;
+}
+.right-hand{
+    width: 37%;
+    height: 70%;
+}
+.result-game{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+
+}
+
+
 }
 
 @media (max-width: 326px) {
@@ -323,4 +377,31 @@ button img {
     justify-content: space-between;
     align-items: center;
   }
+
+  .game-left{
+    height: 60%;
+    width: 35%;
+    animation: shake 0.9s ease infinite;
+
+}
+
+
+
+
+
+.game-right{
+    height: 60%;
+    width: 35%;
+    animation: shake 0.9s ease infinite;
+
+}
+.left-hand{
+    width: 39%;
+    height: 60%;
+}
+.right-hand{
+    width: 39%;
+    height: 60%;
+}
+
 }
