@@ -405,3 +405,54 @@ button img {
 }
 
 }
+
+
+/* Game over va winner textlari  */
+
+.txt-stop{
+  position:fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  display: none;
+
+}
+
+.fade-in-text {
+  opacity: 0.1;
+  font-size: 10px;
+  text-align: center;
+  animation: fadeInAndGrow 2s forwards;
+  display: inline-block;
+  display: none;
+  position: fixed;
+  top: 40%;
+  right: 44%;
+  background-color: transparent;
+  z-index: 99;
+  transform-origin: center; /* Markazdan kengayishi uchun */
+}
+
+@keyframes fadeInAndGrow {
+  from {
+      opacity: 0.1;
+      transform: scale(1); /* Boshlang'ich holat */
+  }
+  to {
+      opacity: 1;
+      transform: scale(4); /* Kattalashadi (30px ga ekvivalent) */
+  }
+}
+
+
+
+
+/* Game over va winner textlari  */
+
+
+.security{
+  z-index: 9999;
+
+  display: none;
+  background-color: rebeccapurple;
+}

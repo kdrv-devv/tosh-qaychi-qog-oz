@@ -10,22 +10,35 @@ won.innerHTML = `Player:${playerCounter}`
 lost.innerHTML = `Draw:${drawCounter}`
 draw.innerHTML = `Computer:${computerCounter}`
 
+let mainContent = document.querySelector(".main-content")
+
 // 
 
 let qurollar = document.querySelectorAll(".qurol")
 let gameStart = document.querySelector(".game-start")
 let resultGame  =document.querySelector(".result-game")
 
+// game Over va Winer textlar 
+
+
+let gameOver = document.querySelectorAll(".maglubiyat")
+let tenglik = document.querySelectorAll(".tenglik")
+let galaba = document.querySelectorAll(".galaba")
+
+// game Over va Winer textlar finish
+
+
 // result qismi 
+
+
 let leftHand = document.querySelector(".left-hand")
 let rightHand = document.querySelector(".right-hand")
-
 
 // result qismi 
 
 qurollar.forEach((qurol) =>{
     qurol.addEventListener("click",function(e){
-        
+
         leftHand.innerHTML = ""
         rightHand.innerHTML = ""
         
@@ -42,7 +55,7 @@ qurollar.forEach((qurol) =>{
         setTimeout(()=>{
              checkWinner(this.getAttribute('data-id'),a)
             resultGame.style.display = "none"
-        },3250)
+        },4250)
         
 
     })
@@ -109,17 +122,30 @@ function checkWinner(userTanlovi,computerTanlovi){
     ){
         playerCounter += 1
         won.innerHTML = `Player:${playerCounter}`
+        galaba.forEach((gal)=>{
+            gal.style.display = "inline-block"
+        })
+        setTimeout(()=>{
+            galaba.forEach((gal)=>{
+                gal.style.display = "none"
+            })
+        },2500)
 
-        alert("Siz g'alaba qildingiz qoyile lekin mallades")
     }else if(
         computerTanlovi == "qogoz" && userTanlovi == "tosh"||
         computerTanlovi == "qaychi" && userTanlovi == "qogoz"||
         computerTanlovi == "tosh" && userTanlovi == "qaychi"
     ){
+        gameOver.forEach((gal)=>{
+            gal.style.display = "inline-block"
+        })
+        setTimeout(()=>{
+            gameOver.forEach((gal)=>{
+                gal.style.display = "none"
+            })
+        },2500)
         computerCounter += 1
         draw.innerHTML = `Computer:${computerCounter}`
-
-        alert("Afsuski kompyuter yutib qo'ydi :(")
     }else if(
         computerTanlovi == "qogoz" && userTanlovi == "qogoz"||
         computerTanlovi == "qaychi" && userTanlovi == "qaychi"||
@@ -127,8 +153,14 @@ function checkWinner(userTanlovi,computerTanlovi){
     ){
         drawCounter += 1
         lost.innerHTML = `Draw:${drawCounter}`
-
-        alert("Durrang bo'ldi :(  shu durrang qanaqa rang ?")
+        tenglik.forEach((gal)=>{
+            gal.style.display = "inline-block"
+        })
+        setTimeout(()=>{
+            tenglik.forEach((gal)=>{
+                gal.style.display = "none"
+            })
+        },2500)
     }
 
 
@@ -146,3 +178,8 @@ function counterRound(){
 
 
 }
+
+
+
+
+
