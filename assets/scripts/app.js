@@ -90,7 +90,7 @@ function userTanlovi(userTanlovi){
     }else if(userTanlovi == "qaychi"){
         leftHand.innerHTML += ""
 
-        leftHand.innerHTML += ` <img src="./assets/imges/left-qaychi.png" alt="">`
+        leftHand.innerHTML += ` <img src="./assets/imges/left-qaychi-norm.png" alt="">`
 
     }
 
@@ -130,6 +130,18 @@ function checkWinner(userTanlovi,computerTanlovi){
 
         alert("Durrang bo'ldi :(  shu durrang qanaqa rang ?")
     }
+
+
+
+}
+
+// roundlanri aniqab beradigan fuksiya 
+
+
+
+
+function counterRound(){
+    
 
 
 
